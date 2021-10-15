@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import PublishRegisterLogin from './components/PublishRegisterLogin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Ecommerce from './components/Ecommerce'
-
+import NewItem from './components/NewItem'
 
 function App() {
   return (
@@ -26,6 +26,13 @@ function App() {
         exact
         render = {Ecommerce}
       />
+
+      <Route
+        path = '/newitem'
+        exact
+        render = {NewItem}
+      />
+
     
 
     </Router>

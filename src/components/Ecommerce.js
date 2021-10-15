@@ -6,7 +6,7 @@ import ListOfItems from './ListOfItems'
 function Ecommerce() {
     return (
         <>
-            <div className="Header" style={{ height: '70px' }}>
+            <div className="Header" style={{ height: '120px' }}>
                 <NavigationTopMenu />
             </div>
 

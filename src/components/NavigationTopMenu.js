@@ -1,13 +1,11 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import Dropdown from 'react-bootstrap/Dropdown'
+import { Link } from 'react-router-dom'
 import OffcanvasBar from './OffcanvasBar'
 
 function NavigationTopMenu() {
@@ -18,7 +16,11 @@ function NavigationTopMenu() {
 
     return (
         <>
-            <Navbar bg="dark" expand="sm" variant='dark' fixed="top">
+            
+
+            
+            
+            <Navbar bg="dark" expand="sm" variant='dark' >
                 <Navbar.Brand href="#">estoybuscando.com</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -58,35 +60,41 @@ function NavigationTopMenu() {
                         />
                         <Button variant="outline-success">Buscar</Button>
                     </Form>
-
+                    <Link to='/newitem'>            
                     <Button>Publicar</Button>
+                    </Link>   
                     <Button>Login</Button>
+                    
                 </Navbar.Collapse>
-            </Navbar>
 
-            <Navbar bg="dark" expand="lg" variant='dark' style={{ maxHeight: '30px' }}>
+
+
+
+            </Navbar>
+            <Navbar bg="dark" expand="sm" variant='dark' style={{ maxHeight: '40px' }} >
 
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                
-                
-                
+
+
                     <Nav
-                        className="mr-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
+                        className="mr-auto"
+                        style={{ maxHeight: '150px' }}
                         navbarScroll
                     >
-                        <OffcanvasBar/>
+                        <OffcanvasBar />
                         <Nav.Link href="#action2">Ultimos Anuncios</Nav.Link>
                         <Nav.Link href="#">Por expirar</Nav.Link>
                         <Nav.Link href="#">Acerca</Nav.Link>
                         <Nav.Link href="#">Ayuda</Nav.Link>
                         <Nav.Link href="#">Contacto</Nav.Link>
-                        
+
                     </Nav>
-                    
+
                 </Navbar.Collapse>
             </Navbar>
+            
+
 
         </>
 
